@@ -1,0 +1,332 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+c4ytable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.container:after,
+.container:before,
+.row:after,
+.row:before {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.container {
+    padding: 0.01em 16px
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto
+}
+
+
+@media (min-width:993px) {
+
+    .hide-large {
+        display: none !important
+    }
+
+    .sidebar.collapse {
+        display: block !important
+    }
+}
+
+@media (max-width:992px) {
+    .sidebar.collapse {
+        display: none
+    }
+
+    .main {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+}
+
+.red {
+    color: #fff !important;
+    background-color: #f44336 !important
+}
+
+.top {
+    position: fixed;
+    width: 100%;
+    z-index: 1
+}
+
+.top {
+    top: 0
+}
+
+.large {
+    font-size: 18px !important
+}
+
+.padding {
+    padding: 8px 16px !important
+}
+
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+
+.button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.button:hover {
+    color: #000 !important;
+    background-color: #ccc !important
+}
+
+.display-topleft {
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.padding-64 {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important
+}
+
+.bar-block .bar-item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+
+.hover-white:hover {
+    color: #000 !important;
+    background-color: #fff !important
+}
+
+
+.xlarge {
+    font-size: 24px !important
+}
+
+.margin-right {
+    margin-right: 16px !important
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2
+}
+
+.main,
+#main {
+    transition: margin-left .4s
+}
+
+
+.jumbo {
+    font-size: 30px !important
+}
+
+.xxxlarge {
+    font-size: 25px !important
+}
+
+.text-red {
+    color: #f44336 !important
+}
+
+
+.pagebutton {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    margin-left: 315px;
+}
+
+
+
+
+input[type=button],
+input[type=submit] {
+    background: #ed3330;
+    border-radius: 5px;
+    color: #fff !important;
+    padding: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    margin-left: 15px;
+
+}
+
+div.split div{
+    float: left;
+    width: 45%;
+    width: 49%;
+    width: 45%;
+    padding: 0 2%;
+    display:block;
+    padding-bottom: 30px;
+}
+
+@media (min-width:601px) {
+
+
+    .half {
+        width: 49.99999%
+    }
+}
+
+
+.half {
+    float: left;
+    width: 100%
+}
+
+
+
+
+
+
+
+
+
+/* (A) THUMBNAILS */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* 3 ITEMS PER ROW */
+    grid-gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* HORIZONTAL CENTER */
+}
+.gallery img {
+    width: 100%;
+    height: 200px;
+    /* FILL, CONTAIN, COVER, SCALE-DOWN : USE WHICHEVER YOU LIKE */
+    object-fit: cover;
+}
+
+/* (B) RESPONSIVE - MOBILE FRIENDLY */
+@media screen and (max-width: 640px) {
+    .gallery {
+        grid-template-columns: repeat(2, auto); /* 2 ITEMS PER ROW */
+    }
+}
+
+/* (X) DOES NOT MATTER */
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* (A) SMALL GALLERY ADD-ON */
+.gallery img:hover {
+    cursor: pointer;
+}
+
+/* (B) LIGHTBOX BACKGROUND */
+#lback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.5s;
+}
+#lback.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* (C) LIGHTBOX IMAGE */
+#lfront {
+    text-align: center;
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+#lfront img {
+    max-width: 80vw;
+    max-height: 80vh;
+}
