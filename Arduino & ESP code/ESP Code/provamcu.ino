@@ -7,8 +7,8 @@
 
 
 /* Set these to your desired credentials. */
-const char *ssid = "EOLO - FRITZ!Box 4020 HK";  //ENTER YOUR WIFI SETTINGS
-const char *password = "56100613065195592492";
+const char *ssid = "";  //ENTER YOUR WIFI SETTINGS
+const char *password = "";
 
 //Web/Server address to read/write from
 const char *host = "192.168.178.41";
