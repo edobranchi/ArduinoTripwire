@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>Dashboard</title>
-
+<meta http-equiv="refresh" content="5">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="TripW.css">
@@ -27,7 +27,6 @@
 
     <!--Menù laterale-->
     <nav class="sidebar red collapse top large padding" style="z-index: 3;width: 200px;font-weight:bold;" id="myS"><br>
-
         <div class="container">
             <h3 class="padding-64"><b>Progetto<br>Esame</b></h3>
         </div>
@@ -39,7 +38,6 @@
             <a href="grafici.php" class="bar-item button hover-white">Grafici</a>
             <a href="galleria.php" class="bar-item button hover-white">Galleria Catture</a>
             <a href="cambionomestazione.php" class="bar-item button hover-white">Cambio nome stazione</a>
-
         </div>
     </nav>
 
@@ -49,22 +47,46 @@
 
     <div class="main" style="margin-left:340px;margin-right:40px">
 
-        <!-- Titolo pagina-->
+        <!-- Titolo pagina -->
         <div class="container" style="margin-top:50px" id="showcase">
             <h1 class="jumbo"><b>Trappola Laser</b></h1>
-            <h1 class="xxxlarge text-red"><b>Dashboard</b></h1>
+            <h1 class="xxxlarge text-red"><b>Cambio nome stazione:</b></h1>
         </div>
 
-        <div style="display:block;padding-bottom:20px"><b>Vuoi resettare arduino?</b></div>
-        <input type="submit" onclick="reseturl()" value="Reset">
-        <div id="resetdiv" style="display:none"><b>Arduino è stato resettato correttamente</b></div>
 
+        <div style="display:block;padding-top:50px"><b>Vuoi cambiare nome alla stazione?</b></div>
+        <form onsubmit="appendurl();return false" action="http://192.168.178.82/">
+            <br>
+            Nuovo nome stazione: <input type="text" name="cambia">
+            <br>
+            <div style="margin-top:30px">
+                <input type="submit" value="cambia">
+            </div>
+        </form>
+        <div id="resetdiv" style="display:none"><b>Nome stazione cambiato correttamente</b></div>
 
     </div>
 
     <script>
-        function reseturl() {
-            var urlres = "http://192.168.178.82/resetnow"
+        function getreq(urlind) {
+            function reqListener() {
+                console.log(this.responseText);
+            }
+
+            var oReq = new XMLHttpRequest();
+            oReq.onload = reqListener;
+            oReq.open("GET", urlind);
+            oReq.send();
+
+
+        }
+        //TODO: commentare questo script
+
+        function appendurl() {
+            var url = "http://192.168.178.82/station";
+            var stationid = document.getElementsByName("cambia");
+            url.append(stationid);
+            getreq(url);
 
             var x = document.getElementById("resetdiv");
             if (x.style.display === "none") {
@@ -76,6 +98,10 @@
         }
 
     </script>
+    </div>
+    </div>
+
+
 
 </body>
 
