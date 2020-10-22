@@ -68,6 +68,7 @@
     </div>
 
     <script>
+        //Manda la richiesta GET creata dalla funzione appendurl()
         function getreq(urlind) {
             function reqListener() {
                 console.log(this.responseText);
@@ -80,8 +81,8 @@
 
 
         }
-        //TODO: commentare questo script
 
+        //Crea la richiesta GET da mandare al Node
         function appendurl() {
             var url = "http://192.168.178.82/station";
             var stationid = document.getElementsByName("cambia");
