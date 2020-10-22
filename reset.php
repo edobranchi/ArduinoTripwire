@@ -19,6 +19,7 @@
     body {
         font-size: 16px;
     }
+
 </style>
 
 <body>
@@ -59,44 +60,16 @@
         <form onsubmit="appendurl();return false" action="http://192.168.178.82/">
             <br>
             Nuovo nome stazione: <input type="text" name="station">
-            <br> <!--TODO: separare la pagina di cambio nome-->
+            <br>
+            <!--TODO: separare la pagina di cambio nome-->
             <input type="submit" value="station">
         </form>
         <div id="resetdiv" style="display:none"><b>Nome stazione cambiato correttamente</b></div>
 
     </div>
-
     </div>
 
     <script>
-        function getreq(urlind) {
-            function reqListener() {
-                console.log(this.responseText);
-            }
-
-            var oReq = new XMLHttpRequest();
-            oReq.onload = reqListener;
-            oReq.open("GET", urlind);
-            oReq.send();
-
-
-        }
-//TODO: commentare questo script
-
-        function appendurl() {
-            var url = "http://192.168.178.82/station";
-            var stationid = document.getElementsByName("station");
-            url.append(stationid);
-            getreq(url);
-
-            var x = document.getElementById("resetdiv");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-            getreq(urlres);
-        }
 
         function reseturl() {
             var urlres = "http://192.168.178.82/resetnow"
@@ -109,6 +82,7 @@
             }
             getreq(urlres);
         }
+
     </script>
 
 </body>

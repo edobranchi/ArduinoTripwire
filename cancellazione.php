@@ -34,6 +34,7 @@
                 <a href="cancellazione.php"  class="bar-item button hover-white">Pulizia DB</a>
                 <a href="grafici.php"  class="bar-item button hover-white">Grafici</a>
                 <a href="galleria.php"  class="bar-item button hover-white">Galleria Catture</a>
+                <a href="cambionomestazione.php"  class="bar-item button hover-white">Cambio nome stazione</a>
             </div>
         </nav>
 
