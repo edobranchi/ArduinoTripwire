@@ -1,36 +1,38 @@
 <?php
-//Creates new record as per request
 
+//chiama il file per scattare la foto quando viene chiamata questo file che crea le entry nel DB
 include 'shootStill.php';
-//Connect to database
 
+//Credenziali di accesso al DB
 $servername = "localhost";
 $username = "edo";
 $password = "edo";
 $dbname = "espdemo";
 
-// Create connection
+// Crea connesione
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+// controlla la connessione
 if ($conn->connect_error) {
     die("Database Connection failed: " . $conn->connect_error);
 }
 
-//Get current date and time
+//crea time stamp attuali
 date_default_timezone_set('Europe/Rome');
-$d = date("Y-m-d");
-//echo " Date:".$d."<BR>";
+$d = date("d-m-Y");
 $t = date("H:i:s");
 
+//estrae status e stazione ricevute dal NODE e le salva nelle variabili $status e $station
 if(!empty($_POST['status']) && !empty($_POST['station']))
 {
     $status = $_POST['status'];
     $station = $_POST['station'];
 
+    //crea la query di inserimento
     $sql = "INSERT INTO logs (station, status, Date, Time)
 
 		VALUES ('".$station."', '".$status."', '".$d."', '".$t."')";
 
+    //controlla se l'esecuzione della query è andata a buon fine
     if ($conn->query($sql) === TRUE) {
         echo "OK";
     } else {
@@ -38,7 +40,7 @@ if(!empty($_POST['status']) && !empty($_POST['station']))
     }
 }
 
-
+//chiude la connessione
 $conn->close();
 
 ?>
