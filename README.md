@@ -39,3 +39,16 @@ Nella pagina **Reset.php** é possibile far eseguire a entrambi i sensori un "So
 (**NB:**Il nome del sensore verrà riportato ad "**A**"  )
 
 Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera alla stazione.
+
+## Componenti necessarie:
+### Hardware:
+- Arduino Uno
+- ESP8266(NODEMCU)
+- 2 Fotoresistenze
+- 2 led
+- 2 resistenze da 110 ohm
+- 2 resistenze da 220 ohm
+- Breadboard
+- Cavo microUSB
+- Fili M-M e F-M
+
