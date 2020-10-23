@@ -1,20 +1,18 @@
-// 5 pins trip wire
-
-// Variables
+// Variabili
 int mode = 1;
 int ambiant;
-int trip = 1000; // The light value I get when using my laser
+int trip = 1000; // Il valore di luce quando il laser è puntato
 int minLight = 900;
 int atAverage;
 long millisCount;
 bool count= false;
 
 
-// Output Pins
+// Pin out
 int ledPin = 13;
 String  modeNames[3] = {"SETTINGS","ARMED","TRIP"};
 
-// Input Pins
+//Pin di input
  
 int tripPin = A0;
 int ambiantPin = A1;
@@ -24,10 +22,9 @@ int provaled2=11;
 void setup() {
 
   pinMode(ledPin, OUTPUT);
-  
   pinMode(provaled,OUTPUT);
-  pinMode(provaled2,OUTPUT);
-  Serial.begin(9600);
+  pinMode(provaled2,OUTPUT);  //Inizializzazione dei pin
+  Serial.begin(9600);       //Avvio comunicazione seriale
 
 }
 
@@ -35,7 +32,7 @@ void setup() {
 void loop() {
   //does something when the mode changes
   switch (mode) {
-    case 0: //calibration mode
+    case 0: //Modalità di calibrazione
       ambiant = analogRead(ambiantPin);
       trip = analogRead(tripPin);
       atAverage = ambiant + ((trip - ambiant)/2);
@@ -48,7 +45,7 @@ void loop() {
 
     break;
 
-    case 1: // Armed mode
+    case 1: // Modalità armata
       digitalWrite(provaled,HIGH);
       digitalWrite(provaled2,LOW);
       digitalWrite(ledPin,LOW);
@@ -69,7 +66,7 @@ void loop() {
     break;
     
     
-    case 2: //Trip Mode
+    case 2: //Modalità attivata
     digitalWrite(provaled,LOW);
     digitalWrite(provaled2,HIGH);
     
@@ -84,12 +81,12 @@ void loop() {
     }
 
  
- delay(1);                       // wait for a bit
+ delay(1);                       // Aspetta un minimo
 }
 
 
 
-//It Beeps
+//Trasmette i dati sul seriale, che verranno letti dal NODEMCU
 void Transmit() {
   
   if (count == false ) {
