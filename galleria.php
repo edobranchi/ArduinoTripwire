@@ -55,6 +55,7 @@
 
             <!-- Titolo pagina -->
             <div class="container" style="margin-top:50px" id="showcase">
+                <h1 class="jumbo"><b>Trappola Laser</b></h1>
                 <h1 class="jumbo"><b>Galleria attivazioni:</b></h1>
             </div>
 

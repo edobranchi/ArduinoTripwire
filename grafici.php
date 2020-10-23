@@ -69,7 +69,7 @@
             <!-- Titolo pagina -->
             <div class="container" style="margin-top:50px" id="showcase">
                 <h1 class="jumbo"><b>Trappola Laser</b></h1>
-                <h1 class="xxxlarge text-red"><b>Dashboard</b></h1>
+                <h1 class="xxxlarge text-red"><b>Grafici attivazioni</b></h1>
 
                 <!--Mostra i 3 grafici-->
                 <div class="split">
