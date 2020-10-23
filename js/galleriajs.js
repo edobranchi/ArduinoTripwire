@@ -1,5 +1,5 @@
 var gallery = {
-    // (A) SHOW SELECTED IMAGE IN LIGHT BOX
+    // Visione ingrandita al click
     show : function(img){
         var clone = img.cloneNode(),
             front = document.getElementById("lfront"),
@@ -10,7 +10,7 @@ var gallery = {
         back.classList.add("show");
     },
 
-    // (B) HIDE THE LIGHTBOX
+    // ridimensionamento al momento del click esterno alla foto
     hide : function(){
         document.getElementById("lback").classList.remove("show");
     }

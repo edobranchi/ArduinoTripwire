@@ -1,37 +1,37 @@
 <?php
-//setting header to json
+
 header('Content-Type: application/json');
 
-//database
+//Credenziali DB
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'edo');
 define('DB_PASSWORD', 'edo');
 define('DB_NAME', 'espdemo');
 
-//get connection
+//Si connette al DB
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 if(!$mysqli){
     die("Connection failed: " . $mysqli->error);
 }
 
-//query to get data from the table
+//query per l'estrazione dei dati
 $query = sprintf("SELECT station,COUNT(station) as nstation,MONTHNAME(Date) AS month FROM logs GROUP BY month ORDER BY FIELD(MONTH,'january','february','march','april','may','june','july','august','september','october','november','december')");
 
-//execute query
+//Esecuzione query
 $result = $mysqli->query($query);
 
-//loop through the returned data
+//Salvataggio dei risultati
 $data = array();
 foreach ($result as $row) {
     $data[] = $row;
 }
 
-//free memory associated with result
+//Libera la memoria
 $result->close();
 
-//close connection
+//chiude la connessione
 $mysqli->close();
 
-//now print the data
+//stampa i dati
 print json_encode($data);

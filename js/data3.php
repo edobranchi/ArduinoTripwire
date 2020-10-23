@@ -1,37 +1,37 @@
 <?php
-//setting header to json
+
 header('Content-Type: application/json');
 
-//database
+//CRedenziali db
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'edo');
 define('DB_PASSWORD', 'edo');
 define('DB_NAME', 'espdemo');
 
-//get connection
+//connessione al db
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 if(!$mysqli){
     die("Connection failed: " . $mysqli->error);
 }
 
-//query to get data from the table
+//query per l'estrazione dei dati
 $query = sprintf(" SELECT station,COUNT(station) as num FROM logs GROUP BY station");
 
-//execute query
+//esecuzione query
 $result = $mysqli->query($query);
 
-//loop through the returned data
+//salvataggio dati
 $data = array();
 foreach ($result as $row) {
     $data3[] = $row;
 }
 
-//free memory associated with result
+//libera la memoria
 $result->close();
 
-//close connection
+//chiude la connessione
 $mysqli->close();
 
-//now print the data
+//stampa i dati
 print json_encode($data3);

@@ -1,37 +1,37 @@
 <?php
-//setting header to json
+
 header('Content-Type: application/json');
 
-//database
+//Credenziali DB
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'edo');
 define('DB_PASSWORD', 'edo');
 define('DB_NAME', 'espdemo');
 
-//get connection
+//Si connette al Db
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 if(!$mysqli){
     die("Connection failed: " . $mysqli->error);
 }
 
-//query to get data from the table
+//Query per l'estrazione
 $query = sprintf("SELECT station,COUNT(station) as nstation FROM `logs` WHERE `Date`>= CURRENT_DATE - INTERVAL 1 DAY GROUP BY station");
 
-//execute query
+//esecuzione query
 $result = $mysqli->query($query);
 
-//loop through the returned data
+//salvataggio dei dati
 $data = array();
 foreach ($result as $row) {
     $data2[] = $row;
 }
 
-//free memory associated with result
+//libera la memoria
 $result->close();
 
-//close connection
+//chiude la connessione
 $mysqli->close();
 
-//now print the data
+//stampa i risultati
 print json_encode($data2);
