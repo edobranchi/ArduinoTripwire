@@ -1,5 +1,7 @@
+//Grafico dei mesi a linea
 $(document).ready(function(){
     $.ajax({
+        //collegamento al file data1.php per estrarre i dati
         url: "/js/data1.php",
         method: "GET",
         success: function(data2) {
@@ -8,12 +10,13 @@ $(document).ready(function(){
             var nstation = [];
             var month = [];
 
+            //creo un vettore con i dati
             for(var i in data2) {
                 station.push("station " + data2[i].station);
                 nstation.push(data2[i].nstation);
                 month.push(data2[i].month);
             }
-
+            //crea il grafico
             var chartdata = {
                 labels: month,
                 datasets : [

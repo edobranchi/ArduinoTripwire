@@ -1,17 +1,19 @@
+//Grafico attivazioni totali per stazione
 $(document).ready(function(){
     $.ajax({
+        //collegamento al file data3.php
         url: "/js/data3.php",
         method: "GET",
         success: function(data3) {
             console.log(data3);
             var station = [];
             var num = [];
-
+            //creo il vettore con i dati
             for(var i in data3) {
                 station.push("station " + data3[i].station);
                 num.push(data3[i].num);
             }
-
+            //creo il grafico
             var chartdata = {
                 labels: station,
                 datasets : [

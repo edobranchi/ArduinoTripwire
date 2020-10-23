@@ -1,17 +1,19 @@
+//Grafico attivazioni ultime 24 ore divise per stazione
 $(document).ready(function(){
     $.ajax({
+        //collegamento al file data2.php
         url: "/js/data2.php",
         method: "GET",
         success: function(data) {
             console.log(data);
             var station = [];
             var nstation = [];
-
+            //creo un vettore con i dati ricevuti
             for(var i in data) {
                 station.push("station " + data[i].station);
                 nstation.push(data[i].nstation);
             }
-
+            //creo il grafico
             var chartdata = {
                 labels: station,
                 datasets : [
