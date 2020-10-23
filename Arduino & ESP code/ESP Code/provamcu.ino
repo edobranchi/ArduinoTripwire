@@ -94,7 +94,7 @@ if (client) {                             // If a new client connects,
              if (header.indexOf("GET /?station=") >= 0) {
                char f = header.charAt(14);
                station=f; 
-               client.print("<meta http-equiv=\"refresh\" content=\"0;URL=http://192.168.178.41/reset.php\">");
+               client.print("<meta http-equiv=\"refresh\" content=\"0;URL=http://192.168.178.41/cambionomestazione.php\">");
             }
            
             
