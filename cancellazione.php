@@ -35,6 +35,7 @@
                 <a href="grafici.php"  class="bar-item button hover-white">Grafici</a>
                 <a href="galleria.php"  class="bar-item button hover-white">Galleria Catture</a>
                 <a href="cambionomestazione.php"  class="bar-item button hover-white">Cambio nome stazione</a>
+                <a href="reset.php" class="bar-item button hover-white">Riavvio Arduino</a>
             </div>
         </nav>
 

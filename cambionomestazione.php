@@ -38,6 +38,7 @@
             <a href="grafici.php" class="bar-item button hover-white">Grafici</a>
             <a href="galleria.php" class="bar-item button hover-white">Galleria Catture</a>
             <a href="cambionomestazione.php" class="bar-item button hover-white">Cambio nome stazione</a>
+            <a href="reset.php" class="bar-item button hover-white">Riavvio Arduino</a>
         </div>
     </nav>
 
@@ -57,10 +58,10 @@
         <div style="display:block;padding-top:50px"><b>Vuoi cambiare nome alla stazione?</b></div>
         <form onsubmit="appendurl();return false" action="http://192.168.178.82/">
             <br>
-            Nuovo nome stazione: <input type="text" name="cambia">
+            Nuovo nome stazione: <input type="text" name="station">
             <br>
             <div style="margin-top:30px">
-                <input type="submit" value="cambia">
+                <input type="submit" value="station">
             </div>
         </form>
         <div id="resetdiv" style="display:none"><b>Nome stazione cambiato correttamente</b></div>
@@ -85,7 +86,7 @@
         //Crea la richiesta GET da mandare al Node
         function appendurl() {
             var url = "http://192.168.178.82/station";
-            var stationid = document.getElementsByName("cambia");
+            var stationid = document.getElementsByName("station");
             url.append(stationid);
             getreq(url);
 
