@@ -16,15 +16,27 @@ $(document).ready(function(){
                 labels: station,
                 datasets : [
                     {
-                        label: 'A B',
+                        label: 'A B C D E F G H',
                         backgroundColor: [
                             'rgba(25, 200, 20, 1)',
-                            'rgba(225, 20, 20, 1)'
+                            'rgba(225, 20, 20, 1)',
+                            'rgba(0, 255, 0, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(128, 255, 0, 1)',
+                            'rgba(0, 255, 255, 1)',
+                            'rgba(255, 255, 0, 1)',
+                            'rgba(255, 255, 128, 1)'
                         ],
 
                         hoverBackgroundColor: [
                             'rgba(25, 200, 20, 0.75)',
-                            'rgba(225, 20, 20, 0.75)'
+                            'rgba(225, 20, 20, 0.75)',
+                            'rgba(0, 255, 0, 0.75)',
+                            'rgba(255, 99, 132, 0.75)',
+                            'rgba(128, 255, 0, 0.75)',
+                            'rgba(0, 255, 255, 0.75)',
+                            'rgba(255, 255, 0, 0.75)',
+                            'rgba(255, 255, 128, 0.75)'
                         ],
                         data: num
                     }]
