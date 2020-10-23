@@ -1,41 +1,35 @@
-
 <?php
-ini_set('display_errors', 1);
 
-//Creates new record as per request
-//Connect to database
+
+//credenziali di accesso al db
 $servername = "localhost";
 $username = "edo";
 $password = "edo";
 $dbname = "espdemo";
 
-// Create connection
+// Crea connessione
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+// Controlla la connessione
 if ($conn->connect_error) {
     die("Database Connection failed: " . $conn->connect_error);
 }
 
-//get the last used number for naming file
+//query per estrarre il numero dell'ultima entry
 $sql = "SELECT MAX(id) from logs";
 
+//esecuzione query
 $maxid = $conn->query($sql);
 
+//salva il risultato dall' array monodimensionale in una variabile '$lastentry'
 while($result = mysqli_fetch_array($maxid)){;
-                                            $lastentry = $result[0];}
+$lastentry = $result[0];}
+
+//chiude la connessione
 $conn->close();
 
 
-//up the number by one
-
-
-
-//construct file name with leading zeros
-$imgName=str_pad($lastentry,6,"0",STR_PAD_LEFT);
-
-
-//take still image with PiCamera and store it in '/var/www/img' directory
-//edit the raspistill command here to taste but make sure not to remove the double quotes!
+//chiama in esecuzione la shell e lancia il comando per scattare la foto che sarà salvata in /var/www/html/img/ con il numero
+//dell'attivazione come nome file
 shell_exec("fswebcam -t 1000 --save /var/www/html/img/".$lastentry.".jpg");
 
 
