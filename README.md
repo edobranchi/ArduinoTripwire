@@ -1,5 +1,21 @@
 
 # Trappola laser con Arduino e NodeMcu
+## Indice:
+
+ - [Funzionalità:](https://github.com/edobranchi/ArduinoTripwire#funzionalit%C3%A0)
+   - [Fase di attivazione](https://github.com/edobranchi/ArduinoTripwire#fase-di-attivazione)
+   - [Visualizzazione dei dati](https://github.com/edobranchi/ArduinoTripwire#visualizzazione-dei-dati)
+   - [Gestione del DB](https://github.com/edobranchi/ArduinoTripwire#gestione-del-db)
+   - [Gestione dei sensori](https://github.com/edobranchi/ArduinoTripwire#gestione-dei-sensori)
+  - [Componenti necessarie:](https://github.com/edobranchi/ArduinoTripwire#componenti-necessarie)
+    - [Hardware](https://github.com/edobranchi/ArduinoTripwire#hardware)
+    - [Software](https://github.com/edobranchi/ArduinoTripwire#software)
+   - [Configurazione iniziale:](https://github.com/edobranchi/ArduinoTripwire#configurazione-iniziale)
+     - [Schematica e cablaggio](https://github.com/edobranchi/ArduinoTripwire#schematica-e-cablaggio) 
+     - [Configurazione software](https://github.com/edobranchi/ArduinoTripwire#configurazione-software)
+       - [Raspberry](https://github.com/edobranchi/ArduinoTripwire#raspberry) 
+       - [Arduino e NodeMCU](https://github.com/edobranchi/ArduinoTripwire#arduino-e-nodemcu)
+
 ## Funzionalità:
 #### Fase di attivazione:
 Una volta puntato il laser sulla fotoresistenza il led rosso si illuminerà facendo entrare Arduino in "**Armed Mode**", l'interruzione del fascio farà scattare la trappola illuminando il led verde.
