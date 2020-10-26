@@ -39,10 +39,12 @@ Nella pagina **Reset.php** é possibile far eseguire a entrambi i sensori un "So
 (**NB:**Il nome del sensore verrà riportato ad "**A**"  )
 
 Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera alla stazione.
-
+ 
 ## Componenti necessarie:
 ### Hardware:
 - Arduino Uno
+- Raspberry Pi
+- Laser Cat-1
 - ESP8266(NODEMCU)
 - 2 Fotoresistenze
 - 2 led
@@ -51,4 +53,21 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
 - Breadboard
 - Cavo microUSB
 - Fili M-M e F-M
+- Webcam USB
+
+### Software:
+- [Apache 2](https://httpd.apache.org/download.cgi)
+- [Raspbian](https://www.raspberrypi.org/downloads/raspberry-pi-os/) 
+- [PHP](https://www.php.net/downloads.php)
+- [MySQL](https://www.mysql.com/it/downloads/)
+- [Arduino IDE](https://www.arduino.cc/en/main/software)
+
+## Configurazione iniziale: 
+### Schematica e cablaggio:
+
+
+### Configurazione software:
+- ##### Raspberry:
+
+- ##### Arduino e NodeMCU:
 
