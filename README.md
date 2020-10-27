@@ -95,5 +95,8 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
   2. Flashare il codice nella cartella "Arduino & ESPCode" rispettivamente in Arduino e nel NODEmcu
   3. Effettuare il cablaggio
 - ##### Codice:
-
+  1. Modificare il codice con l'indirizzo locale del proprio server.
+  
+Una Volta eseguiti i passaggi collegare ad una fonte di alimentazione il NODEMcu e puntare un laser sulla fotocellula.
+Non appena il led rosso si illuminerà la trappola sarà armata.
 
