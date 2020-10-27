@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 
 //crea time stamp attuali
 date_default_timezone_set('Europe/Rome');
-$d = date("d-m-Y");
+$d = date("Y-m-d");
 $t = date("H:i:s");
 
 //estrae status e stazione ricevute dal NODE e le salva nelle variabili $status e $station
