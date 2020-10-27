@@ -81,9 +81,19 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
 ## Configurazione iniziale: 
 ### Schematica e cablaggio:
 
+![Cablaggio](https://user-images.githubusercontent.com/28054437/97241830-85d84600-17f2-11eb-9faa-8c9a09c4a72c.png)
 
 ### Configurazione software:
 - ##### Raspberry:
-
+  1. Installare Raspbian ed eseguire il primo avvio.
+  2. Installare le componenti software elencate in precedenza.
+  3. Avviare il server Apache.
+  4. Clonare il repository nella cartella di default di Apache (Generalmente /var/www/html)
+  5. Collegare la webcam USB
 - ##### Arduino e NodeMCU:
+  1. Immettere le proprie credenziali WIFI nel file "provamcu.ino"
+  2. Flashare il codice nella cartella "Arduino & ESPCode" rispettivamente in Arduino e nel NODEmcu
+  3. Effettuare il cablaggio
+- ##### Codice:
+
 
