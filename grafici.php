@@ -32,17 +32,17 @@
 
     <body>
 
-        <!-- Importa i file dei singoli grafici-->
+        <!-- Importa i file Di chart.js-->
+
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+        <script src="https://unpkg.com/chartjs-plugin-colorschemes"></script>
+        <!--Importo i miei file di disegno-->
         <script type="text/javascript" src="/js/app.js"></script>
         <script type="text/javascript" src="/js/app2.js"></script>
         <script type="text/javascript" src="/js/app3.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-
-        <script src="https://unpkg.com/chartjs-plugin-colorschemes"></script>
         <!--Menù laterale-->
         <nav class="sidebar red collapse top large padding" style="z-index: 3;width: 200px;font-weight:bold;" id="mySidebar"><br>
             <div class="container">
