@@ -47,11 +47,11 @@ Sono presenti 2 pagine per la gestione del DB:
 
 
  - **Inizializzazione.php** : Operazione necessaria solo al primo avvio, inizializza il DB e lo rende pronto a ricevere dati.
-- **PuliziaDB.php** : Svuota il DB da tutti i rilevamenti e cancella tutte le foto a esse associate. **NB:** Operazione irreversibile.
+- **PuliziaDB.php** : Svuota il DB da tutti i rilevamenti e cancella tutte le foto ad esse associate. **NB:** Operazione irreversibile.
 
 #### Gestione dei Sensori:
 
-Nella pagina **Reset.php** é possibile far eseguire a entrambi i sensori un "Soft Reset", dopo questa operazione sarà necessario attendere qualche secondo per permettere ad entrambe le schede il riavvio. 
+Nella pagina **Reset.php** é possibile far eseguire ad entrambi i sensori un "Soft Reset", dopo questa operazione sarà necessario attendere qualche secondo per permettere ad entrambe le schede il riavvio. 
 (**NB:**Il nome del sensore verrà riportato ad "**A**"  )
 
 Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera alla stazione.
@@ -97,6 +97,6 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
 - ##### Codice:
   1. Modificare il codice con l'indirizzo locale del proprio server.
   
-Una Volta eseguiti i passaggi collegare ad una fonte di alimentazione il NODEMcu e puntare un laser sulla fotocellula.
+Una volta eseguiti tutti i passaggi collegare ad una fonte di alimentazione il NODEMcu e puntare un laser sulla fotocellula.
 Non appena il led rosso si illuminerà la trappola sarà armata.
 
