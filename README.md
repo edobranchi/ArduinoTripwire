@@ -83,6 +83,14 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
 
 ![Cablaggio](https://user-images.githubusercontent.com/28054437/97241830-85d84600-17f2-11eb-9faa-8c9a09c4a72c.png)
 
+### Struttura web:
+
+![web]()
+
+### PCB:
+
+![pcb]()
+
 ### Configurazione software:
 - ##### Raspberry:
   1. Installare Raspbian ed eseguire il primo avvio.
