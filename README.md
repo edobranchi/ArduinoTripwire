@@ -85,11 +85,11 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
 
 ### Struttura web:
 
-![web]()
+![web](https://user-images.githubusercontent.com/28054437/97187485-c3ad7e00-17a2-11eb-9ae4-a81750594c64.png)
 
 ### PCB:
 
-![pcb]()
+![pcb](https://user-images.githubusercontent.com/28054437/97241832-87a20980-17f2-11eb-9209-16aa2817b7e6.png)
 
 ### Configurazione software:
 - ##### Raspberry:
