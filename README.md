@@ -47,11 +47,11 @@ Sono presenti 2 pagine per la gestione del DB:
 
 
  - **Inizializzazione.php** : Operazione necessaria solo al primo avvio, inizializza il DB e lo rende pronto a ricevere dati.
-- **PuliziaDB.php** : Svuota il DB da tutti i rilevamenti e cancella tutte le foto a esse associate. **NB:** Operazione irreversibile.
+- **PuliziaDB.php** : Svuota il DB da tutti i rilevamenti e cancella tutte le foto ad esse associate. **NB:** Operazione irreversibile.
 
 #### Gestione dei Sensori:
 
-Nella pagina **Reset.php** é possibile far eseguire a entrambi i sensori un "Soft Reset", dopo questa operazione sarà necessario attendere qualche secondo per permettere ad entrambe le schede il riavvio. 
+Nella pagina **Reset.php** é possibile far eseguire ad entrambi i sensori un "Soft Reset", dopo questa operazione sarà necessario attendere qualche secondo per permettere ad entrambe le schede il riavvio. 
 (**NB:**Il nome del sensore verrà riportato ad "**A**"  )
 
 Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera alla stazione.
@@ -83,6 +83,14 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
 
 ![Cablaggio](https://user-images.githubusercontent.com/28054437/97241830-85d84600-17f2-11eb-9faa-8c9a09c4a72c.png)
 
+### Struttura web:
+
+![web](https://user-images.githubusercontent.com/28054437/97187485-c3ad7e00-17a2-11eb-9ae4-a81750594c64.png)
+
+### PCB:
+
+![pcb](https://user-images.githubusercontent.com/28054437/97241832-87a20980-17f2-11eb-9209-16aa2817b7e6.png)
+
 ### Configurazione software:
 - ##### Raspberry:
   1. Installare Raspbian ed eseguire il primo avvio.
@@ -97,6 +105,6 @@ Nella pagina **Cambionomestazione.php** è possibile assegnare un'altra lettera 
 - ##### Codice:
   1. Modificare il codice con l'indirizzo locale del proprio server.
   
-Una Volta eseguiti i passaggi collegare ad una fonte di alimentazione il NODEMcu e puntare un laser sulla fotocellula.
+Una volta eseguiti tutti i passaggi collegare ad una fonte di alimentazione il NODEMcu e puntare un laser sulla fotocellula.
 Non appena il led rosso si illuminerà la trappola sarà armata.
 
