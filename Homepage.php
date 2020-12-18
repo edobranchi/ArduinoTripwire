@@ -32,13 +32,13 @@
             </div>
             <div class="bar-block">
 
-                <a href="Homepage.php"  class="bar-item button hover-white">Statistiche</a>
-                <a href="Inizializzazione.php"  class="bar-item button hover-white">Inizializza DB</a>
-                <a href="cancellazione.php"  class="bar-item button hover-white">Pulizia DB</a>
-                <a href="grafici.php"  class="bar-item button hover-white">Grafici</a>
-                <a href="galleria.php"  class="bar-item button hover-white">Galleria Catture</a>
-                <a href="cambionomestazione.php"  class="bar-item button hover-white">Cambio nome stazione</a>
-                <a href="reset.php" class="bar-item button hover-white">Riavvio Arduino</a>
+                 <a href="grafici.php" class="bar-item button hover-white">Grafici</a>
+            <a href="Inizializzazione.php" class="bar-item button hover-white">Inizializza DB</a>
+            <a href="cancellazione.php" class="bar-item button hover-white">Pulizia DB</a>
+            <a href="galleria.php" class="bar-item button hover-white">Galleria Catture</a>
+            <a href="cambionomestazione.php" class="bar-item button hover-white">Cambio nome stazione</a>
+            <a href="reset.php" class="bar-item button hover-white">Riavvio Arduino</a>
+            <a href="Homepage.php" class="bar-item button hover-white">Log Avanzati</a>
             </div>
         </nav>
 
