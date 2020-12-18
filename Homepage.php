@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Dashboard</title>
-    <meta http-equiv="refresh" content="5">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="TripW.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <style>
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: "Poppins", sans-serif
-        }
+<title>Dashboard</title>
+<meta http-equiv="refresh" content="5">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="TripW.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
 
-        body {
-            font-size: 16px;
-        }
+    body {
+        font-size: 16px;
+    }
 
-    </style>
+</style>
 
-    <body>
+<body>
 
 
-        <!--Menù laterale-->
-        <nav class="sidebar red collapse top large padding" style="z-index: 3;width: 200px;font-weight:bold;" id="myS"><br>
-            <div class="container">
-                <h3 class="padding-64"><b>Progetto<br>Esame</b></h3>
-            </div>
-            <div class="bar-block">
+    <!--Menù laterale-->
+    <nav class="sidebar red collapse top large padding" style="z-index: 3;width: 200px;font-weight:bold;" id="myS"><br>
+        <div class="container">
+            <h3 class="padding-64"><b>Progetto<br>Esame</b></h3>
+        </div>
+        <div class="bar-block">
 
-                 <a href="grafici.php" class="bar-item button hover-white">Grafici</a>
+            <a href="grafici.php" class="bar-item button hover-white">Grafici</a>
             <a href="Inizializzazione.php" class="bar-item button hover-white">Inizializza DB</a>
             <a href="cancellazione.php" class="bar-item button hover-white">Pulizia DB</a>
             <a href="galleria.php" class="bar-item button hover-white">Galleria Catture</a>
             <a href="cambionomestazione.php" class="bar-item button hover-white">Cambio nome stazione</a>
             <a href="reset.php" class="bar-item button hover-white">Riavvio Arduino</a>
             <a href="Homepage.php" class="bar-item button hover-white">Log Avanzati</a>
-            </div>
-        </nav>
+        </div>
+    </nav>
 
 
 
 
 
-        <div class="main" style="margin-left:340px;margin-right:40px">
+    <div class="main" style="margin-left:340px;margin-right:40px">
 
-            <!-- Titolo pagina -->
-            <div class="container" style="margin-top:50px" id="showcase">
-                <h1 class="jumbo"><b>Trappola Laser</b></h1>
-                <h1 class="xxxlarge text-red"><b>Dashboard</b></h1>
-            </div>
+        <!-- Titolo pagina -->
+        <div class="container" style="margin-top:50px" id="showcase">
+            <h1 class="jumbo"><b>Trappola Laser</b></h1>
+            <h1 class="xxxlarge text-red"><b>Dashboard</b></h1>
+        </div>
 
 
-            <div id="cards" class="cards">
-                <?php
+        <div id="cards" class="cards">
+            <?php
 
                 //Parametri di connessione al DB
                 $servername = "localhost";
@@ -100,11 +100,11 @@
                 ?>
 
 
-            </div>
         </div>
+    </div>
 
 
 
-    </body>
+</body>
 
 </html>
